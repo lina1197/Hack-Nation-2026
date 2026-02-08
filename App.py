@@ -11,12 +11,11 @@ import pandas as pd
 # Initialize systems
 print("Initializing Virtue Foundation IDP Agent...")
 
-# Path to dataset (looks in root folder first, falls back to uploads)
 import os
 import urllib.request
 
 # Local filename
-DATASET_LOCAL = "Virtue Foundation Ghana v0.3 - Sheet1.csv"
+DATASET_LOCAL = "Virtue_Foundation_Ghana_v0_3_-_Sheet1.csv"
 
 # GitHub raw URL
 DATASET_URL = "https://raw.githubusercontent.com/lina1197/Hack-Nation-2026/main/Virtue%20Foundation%20Ghana%20v0.3%20-%20Sheet1.csv"
@@ -27,8 +26,9 @@ if not os.path.exists(DATASET_LOCAL):
     urllib.request.urlretrieve(DATASET_URL, DATASET_LOCAL)
     print("Dataset downloaded.")
 
-# Use local path for your RAG system
+# Set path for RAG system
 DATASET_PATH = DATASET_LOCAL
+
 
 
 # Initialize RAG system
