@@ -414,8 +414,7 @@ with gr.Blocks(title="Virtue Foundation - Healthcare IDP Agent", theme=gr.themes
 
 # Launch
 
-import os
-
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 7860))  # Uses cloud-assigned PORT if available
-    demo.launch(server_name="0.0.0.0", server_port=port, share=True)
+    # Let Gradio pick a free port automatically
+    demo.launch(server_name="0.0.0.0", share=True)
+
