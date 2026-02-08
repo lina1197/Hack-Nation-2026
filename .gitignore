@@ -44,6 +44,8 @@ mlartifacts/
 *.swo
 *~
 
+SetupSummary.md
+
 # OS
 .DS_Store
 Thumbs.db
