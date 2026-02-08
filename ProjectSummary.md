@@ -423,7 +423,5 @@ This system represents a significant step toward the challenge vision: **turning
 ## Contact & Submission
 
 **Code Repository**: All files delivered in `https://github.com/lina1197/Hack-Nation-2026`  
-**Demo Video**: In progress  
-**Live Demo**: Can be deployed to Databricks or cloud platform  
 
 Thank you for considering this submission. We're excited about the potential to deploy this system with the Virtue Foundation to make real-world impact. 🌍❤️

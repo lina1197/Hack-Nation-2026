@@ -13,10 +13,23 @@ print("Initializing Virtue Foundation IDP Agent...")
 
 # Path to dataset (looks in root folder first, falls back to uploads)
 import os
-if os.path.exists("/workspaces/Hack-Nation-2026/Virtue Foundation Ghana v0.3 - Sheet1.csv"):
-    DATASET_PATH = "/workspaces/Hack-Nation-2026/Virtue Foundation Ghana v0.3 - Sheet1.csv"
-else:
-    raise FileNotFoundError("Dataset not found. Please place Virtue_Foundation_Ghana_v0_3_-_Sheet1.csv in the root folder.")
+import urllib.request
+
+# Local filename
+DATASET_LOCAL = "Virtue Foundation Ghana v0.3 - Sheet1.csv"
+
+# GitHub raw URL
+DATASET_URL = "https://raw.githubusercontent.com/lina1197/Hack-Nation-2026/main/Virtue%20Foundation%20Ghana%20v0.3%20-%20Sheet1.csv"
+
+# Download CSV if not already present
+if not os.path.exists(DATASET_LOCAL):
+    print("Downloading dataset from GitHub...")
+    urllib.request.urlretrieve(DATASET_URL, DATASET_LOCAL)
+    print("Dataset downloaded.")
+
+# Use local path for your RAG system
+DATASET_PATH = DATASET_LOCAL
+
 
 # Initialize RAG system
 print("Building RAG index...")
